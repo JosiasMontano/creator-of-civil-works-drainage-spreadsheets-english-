@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="creator-of-storm-drain-spreadsheets(english).css"/>
+      <title>civil embankments</title>
+    </head>
+      <body>
+        
+          <div id="header">
+            <h3 id="titulo">App for sewage storm sewage plans</h3>
+            <h6 id="subtitulo">Fill in the data and get the results</h6>
+          </div>
+          <div id="container">
+            <fieldset id="firstdates">
+               <legend>firstdates</legend>   
+               <label for="fila">Row:</label>
+               <input type="number" id="fila" name="fila" placeholder="Enter the row" >
+               <label for="calle">Street:</label>
+               <input type="text" id="calle" name="calle" placeholder="Enter the street">
+               <label for="camarasup">Upper Chamber:</label>
+               <input type="text" id="camarasup" name="camarasup" placeholder="Enter the name of the upper chamber" >
+               <label for="camarainf">Lower Chamber:</label>
+               <input type="text" id="camarainf" name="camarainf" placeholder="Enter the name of the lower chamber"> 
+             </fieldset>
+            
+            <fieldset id="longitudes">
+              <legend>Length</legend>       
+              <h5>LENGTHS  (m)</h5>
+              <label for="lpropia">Own Length: </label>
+              <input type="number" id="lpropia" name="lpropia" placeholder="Enter the value">
+              <label for="ltributaria">Tributary Length: </label>
+              <input type="number" id="ltributaria" name="ltributaria" placeholder="Enter the value">
+              <span class="answerText">Accumulated Length: <strong><span id="lacumulada">0</span></strong></span>
+            </fieldset>
+                
+              <fieldset id="areas">
+                 <legend>areas</legend> 
+                 <h5>AREAS (Ha)</h5>
+                 <label for="apropia">Own Area (Ha): </label>
+                 <input type="number" id="apropia" name="apropia" placeholder="Enter the value">          
+                 <label for="atributaria">Tributary Area (Ha): </label>
+                 <input type="number" id="atributaria" name="atributaria" placeholder="Enter the value">        
+                 <span class="answerText">Accumulated Area:  <strong><span id="aacumulada">0</span></strong></span>
+            </fieldset>
+            
+            <fieldset class="anuncio">
+                <legend>rc</legend>
+                <span>runoff coefficient <strong>C=0.3</strong></span>
+            </fieldset>
+            <fieldset class="anuncio">
+                <legend>mc</legend>  
+                <span>manning coefficient: <strong>n=0.01</strong></span>
+            </fieldset>
+            
+            <fieldset id="tiempos">
+              <legend>times</legend>
+              <h5>Times (s)</h5>     
+              <label for="velocidad">Velocity (m/s): </label>
+              <input type="number" id="velocidad" name="velocidad" placeholder="Enter the value">   
+              <label for="tentrada">Inlet Time (min): </label>
+              <input type="number" id="tentrada" name="tentrada" placeholder="Enter the value">
+              <span class="answerText">Flow Time (min): <strong><span id="tflujo">0</span></strong></span>    
+              <span class="answerText">Concentration Time (min): <strong><span id="tconcentracion">0</span></strong></span>
+            </fieldset>  
+            
+            <fieldset class="anuncio">
+              <legend>Intensity</legend>      
+              <span class="answerText"><strong>Intensity (mm/hr) es: I=<span id="intensidad">0</span></strong></span>
+            </fieldset>
+            <fieldset class="anuncio">
+              <legend>design-flow</legend>   
+              <span class="answerText"><strong>Design Flow Rate: Qd(l/s)= <span id="caudaldiseño">0</span></strong></span>
+            </fieldset>
+            
+            <fieldset id="diametros">  
+              <legend>diameter</legend>     
+              <label for="diametro">Diameter (mm): </label>
+              <input type="number" id="diametro" name="diametro" placeholder="Enter the value(mm)">
+            </fieldset>
+        
+            <fieldset>
+                  <legend>GROUND-ELEVATIONS</legend>
+               <h5>GROUND ELEVATIONS</h5>
+               <label for="cotat1">Terrain Elevation 1 (Ct1): </label>
+               <input type="number" id="cotat1" name="cotat1" placeholder="Enter  Ct1">
+               <label for="cotat2">Terrain Elevation 2 (Ct2): </label>
+               <input type="number" id="cotat2" name="cotat2" placeholder="Enter  Ct2">
+               <label for="cotas1">Invert Elevation 1 (Cs1): </label>
+               <input type="number" id="cotas1" name="cotas1" placeholder="Enter  Cs1">
+               <label for="cotas2">Invert Elevation 2 (Cs2): </label>
+               <input type="number" id="cotas2" name="cotas2" placeholder="Enter  Cs2">
+             </fieldset> 
+        </div>
+        <fieldset class="anuncio">
+            <legend>upper</legend>
+              <span class="answerText"><strong>Upper height H1= <span id="alturah1">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>low</legend>
+              <span class="answerText"><strong>Lower height  H2= <span id="alturah2">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+              <legend>average-height</legend>
+              <span class="answerText"><strong>Average height Hp(m)= <span id="hpromedio">0</span></strong></span>
+        </fieldset>
+            <fieldset class="anuncio">
+              <legend>firstdates</legend>
+              <span class="answerText"><strong>Slope  S(%)= <span id="pendiente">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>radius</legend>
+              <span class="answerText"><strong>Radius  R(m)= <span id="radio">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>areatubo</legend>
+              <span class="answerText"><strong>Pipe area A'(m^2)= <span id="areatubo">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>flow-rate</legend>
+              <span class="answerText"><strong>Full pipe flow rate Q(l/s)= <span id="caudaltubolleno">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>velocity</legend>
+              <span class="answerText"><strong>Full pipe velocity  V(m/s)= <span id="velocidadtubolleno">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>rq</legend>
+              <span class="answerText"><strong>Flow ratio (design flow/full pipe flow) q/Q= <span id="coeficienteq">0</span></strong></span>
+        </fieldset>
+        <fieldset id="gamma">       
+            <legend>gamma</legend>
+              <label for="gamma">Gamma coefficient y (Recommended value: 1000): </label>
+              <input type="number" id="gamma" name="gamma" placeholder="Enter the value">
+            </fieldset>
+         <fieldset class="anuncio"> 
+            <legend>rv</legend>
+              <span class="answerText"><strong>Flow velocity ratio (partial/full pipe) V/v'= <span id="coeficientev">0</span></strong></span>
+        </fieldset>
+         <fieldset class="anuncio">
+            <legend>rd</legend>
+              <span class="answerText"><strong>Flow diameter ratio (partial/full pipe) d/D= <span id="coeficiented">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>rr</legend>
+              <span class="answerText"><strong>Hydraulic radius ratio (partial/full pipe) rh/RH= <span id="coeficienter">0</span></strong></span>
+        </fieldset>
+        
+          <fieldset id="Trench">
+            <legend>trench</legend>
+              <h5>TRENCH WIDTH:: </h5> 
+               
+             <span class="answerText"><strong>Trench velocity Vz(m/s)= <span id="velocidadzanja">0</span></strong></span>
+             <span class="answerText"><strong>Trench diameter Dz(mm)= <span id="diametrozanja">0</span></strong></span>
+             <span class="answerText"><strong>Trench radius Rz(m)= <span id="radiozanja">0</span></strong></span>     
+            </fieldset>  
+          <fieldset class="anuncio">
+            <legend>t</legend>
+              <span class="answerText"><strong>Attractive force T(kg/m2)= <span id="fuerzaa">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>ve</legend>
+              <span class="answerText"><strong>Excavation volume  Ve(m3)= <span id="volumen">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>vc</legend>
+              <span class="answerText"><strong>Sand volume Vc(m3)= <span id="volumena">0</span></strong></span>
+        </fieldset>
+        <fieldset class="anuncio">
+            <legend>vr</legend>
+              <span class="answerText"><strong>Backfill volume Vr(m3)= <span id="volumenr">0</span></strong></span> 
+        </fieldset>
+        <script src="./creator-of-storm-drain-spreadsheets(english).js"></script>
+      </body>
+
+    </html>
